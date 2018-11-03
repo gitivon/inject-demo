@@ -31,9 +31,6 @@ const Factory = (target: any) => {
   return new target(...args);
 }
 
-// 注入器添加 Provider，相当于 module 配置里的 providers
-const providers = [Person];
-
 // 一个实例化工厂，对构造函数进行诸如
 const user = Factory(User);
 console.log(user.person); // Person {}
