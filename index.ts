@@ -26,7 +26,7 @@ class User {
 }
 
 const Factory = (target: any) => {
-  const providers = Reflect.getMetadata('design:paramtypes', target)
+  const providers = Reflect.getMetadata(DESIGN_PARAMTYPES, target)
   const args = providers.map((Foo: any) => new Foo());
   return new target(...args);
 }
